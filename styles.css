@@ -209,6 +209,10 @@ input[type=number] {
   margin-top: 50px;
   
 }
+.message > span{
+  display: flex;
+  align-items: baseline;
+}
 
 .game{
   margin: 0 auto;
