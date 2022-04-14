@@ -1,0 +1,225 @@
+html{
+  max-height: 100vh;
+}
+body{
+  padding: 20px;
+  margin: 0;
+  background-color:darkcyan ;
+  max-height: 100vh;
+}
+
+.user-input{
+  appearance: none;
+  outline: none;
+  border-color: transparent transparent wheat transparent;
+  background-color: transparent;
+  font-size: 30px;
+  color:wheat;
+  font-weight: 600;
+  width: 130px;
+}
+
+.invalid-input{
+  box-shadow: inset 0em 0em 1em tomato;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.congrats{
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  align-items: center;
+  gap:50px
+
+}
+.creature{
+  position: relative;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.creature .body{
+  position:relative;
+  width:210px;
+  height: 260px;
+  padding-top: 40px;
+  border-radius: 50%;
+  background-color: greenyellow;
+  z-index: 10;
+}
+
+.creature .eye {
+  position:relative;
+  width: 100px;
+  height:120px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 50%;
+  overflow:hidden;
+}
+
+.creature .pupil{
+  position:absolute;
+  top: 10px;
+  left:40px;
+  width:30px;
+  height:30px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.creature .mouth{
+  position:absolute;
+  top: 150px;
+  left: 50px;
+  width: 100px;
+  height: 60px;
+  border-radius: 50%;
+  border-bottom:6px solid red;
+}
+
+.creature .arm{
+  position: absolute;
+  width: 200px;
+  height: 10px;
+  border-radius: 0  50% 50% 0;
+  background-color: green;
+}
+.creature .arm-left{
+  transform: rotate(
+    -120deg);
+        top: 65px;
+        left: -140px;
+}
+.creature .arm-right{
+  transform: rotate(
+    -60deg);
+        top: 65px;
+        right: -140px;
+}
+
+.creature .leg{
+  position: absolute;
+  width: 100px;
+  height: 15px;
+  border-radius: 0  50% 50% 0;
+  background-color: green;
+  z-index: 1;
+}
+.creature .leg-left{
+  transform: rotate(
+    80deg);
+        bottom: -40px;
+        left: calc(50% - 20px);
+}
+.creature .leg-right{
+  transform: rotate(
+    100deg);
+        bottom: -40px;
+        right: calc(50% - 20px);
+}
+
+.flag{
+  position: relative;
+  text-transform: uppercase;
+  color: yellow;
+  background-color: tomato;
+  padding: 10px 20px;
+  font-size: 32px;
+  font-weight: 600;
+  width: fit-content;
+
+  min-width: 330px;
+  text-align: center;
+}
+.flag:before, .flag:after{
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 100px;
+  top:50%;
+  left:-5px;
+  background-color: #783c00 ;
+}
+
+.flag::after{
+  left: 100%;
+}
+
+.bull, .cow{
+  display: block;
+  width: 30px;
+  height: 30px;
+  fill:goldenrod
+}
+
+.bull{
+  fill:brown
+}
+
+.attempts{
+  display: flex;
+  flex-direction: column-reverse;
+  list-style:decimal-leading-zero;
+  flex-wrap: wrap;
+}
+
+.attempt{
+  display: flex;
+  align-items: baseline;
+  font-size: 30px;
+  gap: 5px;
+}
+
+.win {
+  font-size: 2em;
+  font-weight: bold;
+  color: wheat;
+}
+
+.message{
+  font-size: 3em;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  border: 3px double wheat;
+  border-radius: 15px;
+  background-color: rgba(0,0,0, 0.3);
+  padding: 20px;
+  color: wheat;
+  position: relative;
+  z-index: 10;
+
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 50px;
+  
+}
+
+.game{
+  margin: 0 auto;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px double wheat;
+  border-radius: 15px;
+  background-color: rgba(0,0,0, 0.3);
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+  display: none;
+}
