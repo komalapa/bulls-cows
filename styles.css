@@ -192,6 +192,7 @@ input[type=number] {
 .message{
   font-size: 3em;
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
   align-items: center;
